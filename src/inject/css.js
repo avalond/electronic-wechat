@@ -1,12 +1,21 @@
 /**
  * Created by Zhongyi on 2/23/16.
  */
-"use strict";
-const Common = require("../common");
+'use strict';
+const Common = require('../common');
 
 class CSSInjector {}
 
 CSSInjector.commonCSS = `
+    div.header, div.title_wrap {
+        -webkit-app-region: drag;
+    }
+    div.title.poi {
+        -webkit-app-region: no-drag;
+    }
+    div.header .avatar, div.header .info {
+        -webkit-app-region: no-drag;
+    }
     div.main {
       height: 100% !important;
       min-height: 0 !important;
